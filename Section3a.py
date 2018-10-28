@@ -43,7 +43,7 @@ with open('Zip_Zri_AllHomes.csv') as csvfile:
             print('No Data on '+row[zipCol])
         else:
             block=[int(row[zipCol]),row[CityCol],int(row[col2018]),int(row[col2015]),int(row[col2018])-int(row[col2015])]
-        mainList.append(block)
+            mainList.append(block)
             
     j +=1
             
