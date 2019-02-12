@@ -88,8 +88,6 @@ for i in range(0,len(mainList)):
     else:
         mainList[i].append(0)
 
-SeattleList = [ent for ent in mainList if ent[1]=='Seattle']
-
 microNum = sorted(list(set([ent[36] for ent in mainList])))
 
 forGraph = []
@@ -113,3 +111,6 @@ pyplot.ylabel('average percentage of homes with decreasing values')
 pyplot.xlabel('Number of microbreweries in zip code')
     
 pyplot.show()
+
+regression=stats.linregress([i[0] for i in forGraph],[i[1] for i in forGraph])
+print(regression)
