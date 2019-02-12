@@ -112,4 +112,9 @@ pyplot.ylabel('Average increase in value per square foot')
 pyplot.xlabel('Number of microbreweries in zip code')
     
 pyplot.show()
-pyplot.savefig('foo.png',  bbox_inches='tight')
+
+regression=stats.linregress([0,1,2,3,4,6,9],[i[1] for i in forGraph])
+print(regression)
+
+regression=stats.linregress([0,1,2,3,4],[forGraph[0],forGraph[1],forGraph[2],forGraph[3],forGraph[4]])
+print(regression)
